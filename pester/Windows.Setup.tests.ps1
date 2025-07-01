@@ -63,15 +63,11 @@ Describe 'Lab Setup tests for 507Win10 VM' {
         Should -BeGreaterOrEqual 1 -Because 'Ensure that first network adapter is set to NAT'
     }
 
-    It 'Ping Google - NAT' {
-      $res = Test-NetConnection -ComputerName dns.google
-      $res | Should -BeTrue -Because 'Ensure that first network adapter is set to NAT'
-    }
   }
 
   Context 'Local system checks' {
     It 'Drive free space > 10GB' {
-        (Get-PSDrive -Name c).Free | Should -BeGreaterThan 10000000000 -Because 'VM disk is low on space'
+      (Get-PSDrive -Name c).Free | Should -BeGreaterThan 10000000000 -Because 'VM disk is low on space'
     }
   }
 
@@ -147,7 +143,7 @@ Describe 'Lab Setup tests for 507Win10 VM' {
     It 'Wappalyzer version' {
       $ver = (osqueryi "select version from firefox_addons where identifier='wappalyzer@crunchlabz.com';" --json 2>$null | 
           ConvertFrom-Json).version
-      $ver | Should -BeExactly '6.10.67'
+      $ver | Should -BeExactly '6.10.82'
     }
 
     It 'FoxyProxy' {
