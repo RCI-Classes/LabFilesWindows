@@ -53,7 +53,7 @@ BeforeDiscovery {
 
 Describe 'Lab Setup tests for 507Win10 VM' {
   Context 'Network connectivity' {
-    It 'Ping 507Ubuntu - HostOnly' {
+    It 'Ping 507Ubuntu' {
       $res = Test-NetConnection -ComputerName ubuntu
       $res | Should -BeTrue -Because 'Ensure that second network adapter is set to Host-only'
     }
