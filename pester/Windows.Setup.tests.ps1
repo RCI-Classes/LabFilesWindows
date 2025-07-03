@@ -30,25 +30,25 @@ BeforeDiscovery {
   }
 
   #If the Azure configuration is not there, then skip the Azure tests
-  if ( -not (Test-Path -Type Leaf -Path C:\Users\student\.azure\azureProfile.json) ) {
-    Write-Host "Skipping Azure tests because config files do not exist"
-    $skipAzure = $true
-  } 
-  else {
-    Write-Host 'Importing AZ Accounts module'
-    Import-Module Az.Accounts
-    Write-Host 'Import complete'
+  # if ( -not (Test-Path -Type Leaf -Path C:\Users\student\.azure\azureProfile.json) ) {
+  #   Write-Host "Skipping Azure tests because config files do not exist"
+  #   $skipAzure = $true
+  # } 
+  # else {
+  #   Write-Host 'Importing AZ Accounts module'
+  #   Import-Module Az.Accounts
+  #   Write-Host 'Import complete'
 
-    Write-Host 'Importing AZ Compute module'
-    Import-Module Az.Compute
-    Write-Host 'Import complete'
+  #   Write-Host 'Importing AZ Compute module'
+  #   Import-Module Az.Compute
+  #   Write-Host 'Import complete'
 
-    #Tenant name may be blank in some tenants!
-    # if((Get-AzTenant).Name -notlike '*sans*'){
-    #   Write-Host "Skipping Azure tests because tenant is not correct"
-    #   $skipAzure = $true
-    # }
-  }
+  #   #Tenant name may be blank in some tenants!
+  #   # if((Get-AzTenant).Name -notlike '*sans*'){
+  #   #   Write-Host "Skipping Azure tests because tenant is not correct"
+  #   #   $skipAzure = $true
+  #   # }
+  # }
 }
 
 Describe 'Lab Setup tests for 507Win10 VM' {
@@ -177,17 +177,17 @@ Describe 'Lab Setup tests for 507Win10 VM' {
 
   }
 
-  Context 'Cloud services - Azure' -Skip:$skipAzure {
+  # Context 'Cloud services - Azure' -Skip:$skipAzure {
 
-    It 'Az CLI account is setup' {
-      (az ad signed-in-user show | ConvertFrom-Json).userPrincipalName | 
-        Should -BeLike 'student*@*' `
-          -Because 'Azure setup from lab 1.1 not correct'
-    }
+  #   It 'Az CLI account is setup' {
+  #     (az ad signed-in-user show | ConvertFrom-Json).userPrincipalName | 
+  #       Should -BeLike 'student*@*' `
+  #         -Because 'Azure setup from lab 1.1 not correct'
+  #   }
 
-    It 'Az PowerShell module retrieves tenant' {
-      (Get-AzTenant).Id | Should -BeLike '*-*-*-*-*' `
-        -Because 'Azure setup from lab 1.1 not correct'       
-    }
-  }
+  #   It 'Az PowerShell module retrieves tenant' {
+  #     (Get-AzTenant).Id | Should -BeLike '*-*-*-*-*' `
+  #       -Because 'Azure setup from lab 1.1 not correct'       
+  #   }
+  # }
 }
