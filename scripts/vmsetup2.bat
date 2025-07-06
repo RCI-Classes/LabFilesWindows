@@ -43,4 +43,10 @@ reg import c:\labFiles\config\servermanager.reg
 echo Setting desktop background
 c:\tools\LGPO.exe /g c:\labFiles\config\desktopGPO
 
+echo Downloading and importing OpenVPN profile
+wget.exe "https://ewb.car3.co/vpn/aud1.ovpn" -O C:\Users\student\Desktop\aud1.ovpn
+"C:\Program Files\OpenVPN Connect\OpenVPNConnect.exe" --accept-GDPR
+"C:\Program Files\OpenVPN Connect\OpenVPNConnect.exe" --import-profile=C:\Users\student\Desktop\aud1.ovpn --name=aud1
+"C:\Program Files\OpenVPN Connect\OpenVPNConnect.exe" --list-profiles
+
 shutdown /r /t 5
