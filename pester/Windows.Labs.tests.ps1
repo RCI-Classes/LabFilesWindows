@@ -105,7 +105,7 @@ Describe '507 Labs' {
     }
 
     It 'Part 7 - Powershell converts JSON correctly' {
-      (($azvm | ConvertFrom-Json) | Where-Object Name -Like '*aud507*').Count | 
+      (($azvm | ConvertFrom-Json) | Where-Object Name -Like '*AUD1*').Count | 
         Should -BeGreaterOrEqual 3
     }
   }
@@ -317,17 +317,17 @@ Describe '507 Labs' {
           -Server 507dc -Credential $cred).DistinguishedName
       $res = dsget user "$userDN" -memberof -expand -s 507dc -u student -p Password1
       $res.Count | Should -Be 7
-      $res | Should -Contain '"CN=Schema Admins,CN=Users,DC=AUD507,DC=local"'
-      $res | Should -Contain '"CN=Domain Admins,CN=Users,DC=AUD507,DC=local"'
+      $res | Should -Contain '"CN=Schema Admins,CN=Users,DC=AUD1,DC=local"'
+      $res | Should -Contain '"CN=Domain Admins,CN=Users,DC=AUD1,DC=local"'
     }
 
     #Inactive/Active/StalePasswordUsers user counts don't really make sense in the lab, so we don't test them
     It 'Part 5 - ADAuditGeneric script returns expected results' {
       Write-Host "Running AD audit script"
       $res = (c:\labFiles\scripts\ADAuditGeneric.ps1 -Server 507dc -Credential $cred)
-      $res.NetBiosName | Should -Be 'AUD507'
-      $res.DNSRoot | Should -Be 'AUD507.local'
-      $res.Forest | Should -Be 'AUD507.local'
+      $res.NetBiosName | Should -Be 'AUD1'
+      $res.DNSRoot | Should -Be 'AUD1.local'
+      $res.Forest | Should -Be 'AUD1.local'
       $res.ADFunctionalLevel | Should -Be 'Windows2016Domain'
       $res.EnabledUsers | Should -BeGreaterOrEqual 995
       $res.DisabledUsers | Should -Be 11
@@ -475,19 +475,19 @@ Describe '507 Labs' {
 
   Context 'Lab 4.4' -Skip:$skipAWS {
     It 'Part 4 - 4 buckets have server side encryption enabled' {
-      $res = ((Get-S3Bucket | Where-Object BucketName -Like '*aud507*' | Get-S3BucketEncryption).ServerSideEncryptionRules | 
+      $res = ((Get-S3Bucket | Where-Object BucketName -Like '*AUD1*' | Get-S3BucketEncryption).ServerSideEncryptionRules | 
           Where-Object ServerSideEncryptionByDefault -NE $null)
       $res.Count | Should -Be 4
     }
 
     It 'Part 4 - 4 buckets have versioning turned off' {
-      $res = (Get-S3Bucket | Where-Object BucketName -Like '*aud507*' | Get-S3BucketVersioning | Where-Object Status -EQ 'Off')
+      $res = (Get-S3Bucket | Where-Object BucketName -Like '*AUD1*' | Get-S3BucketVersioning | Where-Object Status -EQ 'Off')
       $res.Count | Should -Be 4
     }
 
     
     It 'Part 4 - 4 buckets have MFA Delete turned off' {
-      $res = (Get-S3Bucket | Where-Object BucketName -Like '*aud507*' | Get-S3BucketVersioning | Where-Object EnableMfaDelete -EQ $false)
+      $res = (Get-S3Bucket | Where-Object BucketName -Like '*AUD1*' | Get-S3BucketVersioning | Where-Object EnableMfaDelete -EQ $false)
       $res.Count | Should -Be 4
     }
   }
