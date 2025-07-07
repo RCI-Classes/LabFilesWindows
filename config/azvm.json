@@ -1,0 +1,1004 @@
+[
+  {
+    "additionalCapabilities": null,
+    "applicationProfile": null,
+    "availabilitySet": null,
+    "billingProfile": null,
+    "capacityReservation": null,
+    "diagnosticsProfile": {
+      "bootDiagnostics": {
+        "enabled": false,
+        "storageUri": null
+      }
+    },
+    "evictionPolicy": null,
+    "extendedLocation": null,
+    "extensionsTimeBudget": "PT1H30M",
+    "hardwareProfile": {
+      "vmSize": "Standard_D2s_v3",
+      "vmSizeProperties": null
+    },
+    "host": null,
+    "hostGroup": null,
+    "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/aud1-RANGE-AZURE-x0xut/providers/Microsoft.Compute/virtualMachines/aud1-range-azure-x0xut-bastion",
+    "identity": null,
+    "instanceView": null,
+    "licenseType": null,
+    "location": "eastus",
+    "name": "aud1-range-azure-x0xut-bastion",
+    "networkProfile": {
+      "networkApiVersion": null,
+      "networkInterfaceConfigurations": null,
+      "networkInterfaces": [
+        {
+          "deleteOption": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/aud1-range-azure-x0xut/providers/Microsoft.Network/networkInterfaces/aud1-range-azure-x0xut-bastion",
+          "primary": true,
+          "resourceGroup": "aud1-range-azure-x0xut"
+        }
+      ]
+    },
+    "osProfile": {
+      "adminPassword": null,
+      "adminUsername": "ubuntu",
+      "allowExtensionOperations": true,
+      "computerName": "aud1-range-azure-x0xut-bastion",
+      "customData": null,
+      "linuxConfiguration": {
+        "disablePasswordAuthentication": true,
+        "patchSettings": {
+          "assessmentMode": "ImageDefault",
+          "automaticByPlatformSettings": null,
+          "patchMode": "ImageDefault"
+        },
+        "provisionVmAgent": true,
+        "ssh": {
+          "publicKeys": [
+            {
+              "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCsNeFNo2K0wX92Ru21vO75Jolsy9YuWmtmh4RgPg4cG6lPXH5BUBADr35i9nP3NXpvXYdyhcgC/SJ0tPHJLycF5buMsqGQOwpnGsgg95e5xCpbudFD54eEeX5eBX851RdRjt/PtH25xBhDrTxqIHzEyeMepF1tXaYU1KBI1kYqLcDMr5aDoWtaWJz/S2nPovgKtirmzXKhllsgr3LM8qkkzWgiwO5Q2rOwer1YoU0u0rkCxXa9hLHtfGm41kkG7WAKQe9wFgnT1ykr8Qy8zTjKjoBqhjO7N3uu/Xq54CHGqlFkS2KQYjl754if5uiCzI90Xj81KUds+VZ+sgbBAief\n",
+              "path": "/home/ubuntu/.ssh/authorized_keys"
+            }
+          ]
+        }
+      },
+      "requireGuestProvisionSignal": true,
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "platformFaultDomain": null,
+    "priority": "Regular",
+    "provisioningState": "Succeeded",
+    "proximityPlacementGroup": null,
+    "resourceGroup": "aud1-RANGE-AZURE-x0xut",
+    "resources": null,
+    "scheduledEventsProfile": null,
+    "securityProfile": null,
+    "storageProfile": {
+      "dataDisks": [],
+      "diskControllerType": "SCSI",
+      "imageReference": {
+        "communityGalleryImageId": null,
+        "exactVersion": "20.04.202505200",
+        "id": null,
+        "offer": "0001-com-ubuntu-server-focal",
+        "publisher": "canonical",
+        "sharedGalleryImageId": null,
+        "sku": "20_04-lts-gen2",
+        "version": "20.04.202505200"
+      },
+      "osDisk": {
+        "caching": "None",
+        "createOption": "FromImage",
+        "deleteOption": "Detach",
+        "diffDiskSettings": null,
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "diskEncryptionSet": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/aud1-range-azure-x0xut/providers/Microsoft.Compute/disks/aud1-range-azure-x0xut-bastion_disk1_d3f328d265524ccb9e87a914807fa53d",
+          "resourceGroup": "aud1-range-azure-x0xut",
+          "securityProfile": null,
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "aud1-range-azure-x0xut-bastion_disk1_d3f328d265524ccb9e87a914807fa53d",
+        "osType": "Linux",
+        "vhd": null,
+        "writeAcceleratorEnabled": false
+      }
+    },
+    "tags": {
+      "Attributes": "bastion",
+      "Environment": "aud1-range-azure",
+      "Name": "aud1-range-azure-x0xut-bastion",
+      "Stage": "x0xut",
+      "rci:course-id": "aud1",
+      "rci:created-by": "04b07795-8ddb-461a-bbee-02f9e1bf7b46",
+      "rci:creation-method": "terraform"
+    },
+    "timeCreated": "2025-07-06T13:18:14.674264+00:00",
+    "type": "Microsoft.Compute/virtualMachines",
+    "userData": null,
+    "virtualMachineScaleSet": null,
+    "vmId": "3b569702-e9c8-4d9f-8fed-d0221a4e78a5",
+    "zones": null
+  },
+  {
+    "additionalCapabilities": null,
+    "applicationProfile": null,
+    "availabilitySet": null,
+    "billingProfile": null,
+    "capacityReservation": null,
+    "diagnosticsProfile": {
+      "bootDiagnostics": {
+        "enabled": false,
+        "storageUri": null
+      }
+    },
+    "evictionPolicy": null,
+    "extendedLocation": null,
+    "extensionsTimeBudget": "PT1H30M",
+    "hardwareProfile": {
+      "vmSize": "Standard_D2s_v3",
+      "vmSizeProperties": null
+    },
+    "host": null,
+    "hostGroup": null,
+    "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/aud1-RANGE-AZURE-x0xut/providers/Microsoft.Compute/virtualMachines/aud1-range-azure-x0xut-catapp",
+    "identity": null,
+    "instanceView": null,
+    "licenseType": null,
+    "location": "eastus",
+    "name": "aud1-range-azure-x0xut-catapp",
+    "networkProfile": {
+      "networkApiVersion": null,
+      "networkInterfaceConfigurations": null,
+      "networkInterfaces": [
+        {
+          "deleteOption": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/aud1-range-azure-x0xut/providers/Microsoft.Network/networkInterfaces/aud1-range-azure-x0xut-catapp",
+          "primary": true,
+          "resourceGroup": "aud1-range-azure-x0xut"
+        }
+      ]
+    },
+    "osProfile": {
+      "adminPassword": null,
+      "adminUsername": "ubuntu",
+      "allowExtensionOperations": true,
+      "computerName": "aud1-range-azure-x0xut-catapp",
+      "customData": null,
+      "linuxConfiguration": {
+        "disablePasswordAuthentication": true,
+        "patchSettings": {
+          "assessmentMode": "ImageDefault",
+          "automaticByPlatformSettings": null,
+          "patchMode": "ImageDefault"
+        },
+        "provisionVmAgent": true,
+        "ssh": {
+          "publicKeys": [
+            {
+              "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCsNeFNo2K0wX92Ru21vO75Jolsy9YuWmtmh4RgPg4cG6lPXH5BUBADr35i9nP3NXpvXYdyhcgC/SJ0tPHJLycF5buMsqGQOwpnGsgg95e5xCpbudFD54eEeX5eBX851RdRjt/PtH25xBhDrTxqIHzEyeMepF1tXaYU1KBI1kYqLcDMr5aDoWtaWJz/S2nPovgKtirmzXKhllsgr3LM8qkkzWgiwO5Q2rOwer1YoU0u0rkCxXa9hLHtfGm41kkG7WAKQe9wFgnT1ykr8Qy8zTjKjoBqhjO7N3uu/Xq54CHGqlFkS2KQYjl754if5uiCzI90Xj81KUds+VZ+sgbBAief\n",
+              "path": "/home/ubuntu/.ssh/authorized_keys"
+            }
+          ]
+        }
+      },
+      "requireGuestProvisionSignal": true,
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "platformFaultDomain": null,
+    "priority": "Regular",
+    "provisioningState": "Succeeded",
+    "proximityPlacementGroup": null,
+    "resourceGroup": "aud1-RANGE-AZURE-x0xut",
+    "resources": null,
+    "scheduledEventsProfile": null,
+    "securityProfile": null,
+    "storageProfile": {
+      "dataDisks": [],
+      "diskControllerType": "SCSI",
+      "imageReference": {
+        "communityGalleryImageId": null,
+        "exactVersion": "20.04.202505200",
+        "id": null,
+        "offer": "0001-com-ubuntu-server-focal",
+        "publisher": "canonical",
+        "sharedGalleryImageId": null,
+        "sku": "20_04-lts-gen2",
+        "version": "20.04.202505200"
+      },
+      "osDisk": {
+        "caching": "None",
+        "createOption": "FromImage",
+        "deleteOption": "Detach",
+        "diffDiskSettings": null,
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "diskEncryptionSet": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/aud1-range-azure-x0xut/providers/Microsoft.Compute/disks/aud1-range-azure-x0xut-catapp_disk1_d321ff00dbe941dc884c63b0b021e87d",
+          "resourceGroup": "aud1-range-azure-x0xut",
+          "securityProfile": null,
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "aud1-range-azure-x0xut-catapp_disk1_d321ff00dbe941dc884c63b0b021e87d",
+        "osType": "Linux",
+        "vhd": null,
+        "writeAcceleratorEnabled": false
+      }
+    },
+    "tags": {
+      "Attributes": "catapp",
+      "Environment": "aud1-range-azure",
+      "Name": "aud1-range-azure-x0xut-catapp",
+      "Stage": "x0xut",
+      "rci:course-id": "aud1",
+      "rci:created-by": "04b07795-8ddb-461a-bbee-02f9e1bf7b46",
+      "rci:creation-method": "terraform"
+    },
+    "timeCreated": "2025-07-06T13:18:49.861434+00:00",
+    "type": "Microsoft.Compute/virtualMachines",
+    "userData": null,
+    "virtualMachineScaleSet": null,
+    "vmId": "2eb2ee9f-a3d3-4473-b167-e6fdff70c956",
+    "zones": null
+  },
+  {
+    "additionalCapabilities": null,
+    "applicationProfile": null,
+    "availabilitySet": null,
+    "billingProfile": null,
+    "capacityReservation": null,
+    "diagnosticsProfile": {
+      "bootDiagnostics": {
+        "enabled": false,
+        "storageUri": null
+      }
+    },
+    "evictionPolicy": null,
+    "extendedLocation": null,
+    "extensionsTimeBudget": "PT1H30M",
+    "hardwareProfile": {
+      "vmSize": "Standard_D2s_v3",
+      "vmSizeProperties": null
+    },
+    "host": null,
+    "hostGroup": null,
+    "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/aud1-RANGE-AZURE-x0xut/providers/Microsoft.Compute/virtualMachines/aud1-range-azure-x0xut-windows",
+    "identity": {
+      "principalId": "4e40c1d4-1811-402f-8a1b-39218fbb7aae",
+      "tenantId": "b8db781b-5f0b-48d2-9fde-0bf7d0e0ae06",
+      "type": "SystemAssigned",
+      "userAssignedIdentities": null
+    },
+    "instanceView": null,
+    "licenseType": null,
+    "location": "eastus",
+    "name": "aud1-range-azure-x0xut-windows",
+    "networkProfile": {
+      "networkApiVersion": null,
+      "networkInterfaceConfigurations": null,
+      "networkInterfaces": [
+        {
+          "deleteOption": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/aud1-range-azure-x0xut/providers/Microsoft.Network/networkInterfaces/aud1-range-azure-x0xut-windows",
+          "primary": true,
+          "resourceGroup": "aud1-range-azure-x0xut"
+        }
+      ]
+    },
+    "osProfile": {
+      "adminPassword": null,
+      "adminUsername": "SROCAdmin",
+      "allowExtensionOperations": true,
+      "computerName": "aud1-ra-a3555",
+      "customData": null,
+      "linuxConfiguration": null,
+      "requireGuestProvisionSignal": true,
+      "secrets": [],
+      "windowsConfiguration": {
+        "additionalUnattendContent": [
+          {
+            "componentName": "Microsoft-Windows-Shell-Setup",
+            "content": null,
+            "passName": "OobeSystem",
+            "settingName": "AutoLogon"
+          },
+          {
+            "componentName": "Microsoft-Windows-Shell-Setup",
+            "content": null,
+            "passName": "OobeSystem",
+            "settingName": "FirstLogonCommands"
+          }
+        ],
+        "enableAutomaticUpdates": true,
+        "enableVMAgentPlatformUpdates": true,
+        "patchSettings": {
+          "assessmentMode": "ImageDefault",
+          "automaticByPlatformSettings": null,
+          "enableHotpatching": false,
+          "patchMode": "AutomaticByPlatform"
+        },
+        "provisionVmAgent": true,
+        "timeZone": null,
+        "winRm": {
+          "listeners": []
+        }
+      }
+    },
+    "plan": null,
+    "platformFaultDomain": null,
+    "priority": "Regular",
+    "provisioningState": "Succeeded",
+    "proximityPlacementGroup": null,
+    "resourceGroup": "aud1-RANGE-AZURE-x0xut",
+    "resources": null,
+    "scheduledEventsProfile": null,
+    "securityProfile": null,
+    "storageProfile": {
+      "dataDisks": [],
+      "diskControllerType": "SCSI",
+      "imageReference": {
+        "communityGalleryImageId": null,
+        "exactVersion": "20348.3807.250605",
+        "id": null,
+        "offer": "windowsserver",
+        "publisher": "microsoftwindowsserver",
+        "sharedGalleryImageId": null,
+        "sku": "2022-datacenter-azure-edition",
+        "version": "20348.3807.250605"
+      },
+      "osDisk": {
+        "caching": "None",
+        "createOption": "FromImage",
+        "deleteOption": "Detach",
+        "diffDiskSettings": null,
+        "diskSizeGb": 127,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "diskEncryptionSet": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/aud1-range-azure-x0xut/providers/Microsoft.Compute/disks/aud1-range-azure-x0xut-windows_OsDisk_1_5bea93f2ff4e4725ab14085624fb1bcc",
+          "resourceGroup": "aud1-range-azure-x0xut",
+          "securityProfile": null,
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "aud1-range-azure-x0xut-windows_OsDisk_1_5bea93f2ff4e4725ab14085624fb1bcc",
+        "osType": "Windows",
+        "vhd": null,
+        "writeAcceleratorEnabled": false
+      }
+    },
+    "tags": {
+      "Attributes": "windows",
+      "Environment": "aud1-range-azure",
+      "Name": "aud1-range-azure-x0xut-windows",
+      "Stage": "x0xut",
+      "rci:course-id": "aud1",
+      "rci:created-by": "04b07795-8ddb-461a-bbee-02f9e1bf7b46",
+      "rci:creation-method": "terraform"
+    },
+    "timeCreated": "2025-07-06T13:18:37.877171+00:00",
+    "type": "Microsoft.Compute/virtualMachines",
+    "userData": null,
+    "virtualMachineScaleSet": null,
+    "vmId": "b38a2387-1c45-4f78-8ea6-6375d33d54dc",
+    "zones": null
+  },
+  {
+    "additionalCapabilities": null,
+    "applicationProfile": null,
+    "availabilitySet": null,
+    "billingProfile": null,
+    "capacityReservation": null,
+    "diagnosticsProfile": {
+      "bootDiagnostics": {
+        "enabled": true,
+        "storageUri": null
+      }
+    },
+    "evictionPolicy": null,
+    "extendedLocation": null,
+    "extensionsTimeBudget": null,
+    "hardwareProfile": {
+      "vmSize": "Standard_B1s",
+      "vmSizeProperties": null
+    },
+    "host": null,
+    "hostGroup": null,
+    "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/RCI-RESOURCE-GROUP/providers/Microsoft.Compute/virtualMachines/JenkinsProxy",
+    "identity": null,
+    "instanceView": null,
+    "licenseType": null,
+    "location": "southcentralus",
+    "name": "JenkinsProxy",
+    "networkProfile": {
+      "networkApiVersion": null,
+      "networkInterfaceConfigurations": null,
+      "networkInterfaces": [
+        {
+          "deleteOption": "Delete",
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/RCI-Resource-Group/providers/Microsoft.Network/networkInterfaces/jenkinsproxy295",
+          "primary": null,
+          "resourceGroup": "RCI-Resource-Group"
+        }
+      ]
+    },
+    "osProfile": {
+      "adminPassword": null,
+      "adminUsername": "clay",
+      "allowExtensionOperations": true,
+      "computerName": "JenkinsProxy",
+      "customData": null,
+      "linuxConfiguration": {
+        "disablePasswordAuthentication": false,
+        "enableVMAgentPlatformUpdates": false,
+        "patchSettings": {
+          "assessmentMode": "ImageDefault",
+          "automaticByPlatformSettings": null,
+          "patchMode": "ImageDefault"
+        },
+        "provisionVmAgent": true,
+        "ssh": null
+      },
+      "requireGuestProvisionSignal": true,
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "platformFaultDomain": null,
+    "priority": null,
+    "provisioningState": "Succeeded",
+    "proximityPlacementGroup": null,
+    "resourceGroup": "RCI-RESOURCE-GROUP",
+    "resources": null,
+    "scheduledEventsProfile": null,
+    "securityProfile": null,
+    "storageProfile": {
+      "dataDisks": [
+        {
+          "caching": "None",
+          "createOption": "Attach",
+          "deleteOption": "Delete",
+          "detachOption": null,
+          "diskIopsReadWrite": null,
+          "diskMBpsReadWrite": null,
+          "diskSizeGb": 16,
+          "image": null,
+          "lun": 0,
+          "managedDisk": {
+            "diskEncryptionSet": null,
+            "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/RCI-Resource-Group/providers/Microsoft.Compute/disks/JenkinsProxy_DataDisk_0",
+            "resourceGroup": "RCI-Resource-Group",
+            "securityProfile": null,
+            "storageAccountType": "Premium_LRS"
+          },
+          "name": "JenkinsProxy_DataDisk_0",
+          "toBeDetached": false,
+          "vhd": null,
+          "writeAcceleratorEnabled": false
+        }
+      ],
+      "diskControllerType": "SCSI",
+      "imageReference": {
+        "communityGalleryImageId": null,
+        "exactVersion": "22.04.202206040",
+        "id": null,
+        "offer": "0001-com-ubuntu-server-jammy",
+        "publisher": "canonical",
+        "sharedGalleryImageId": null,
+        "sku": "22_04-lts-gen2",
+        "version": "latest"
+      },
+      "osDisk": {
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "deleteOption": "Delete",
+        "diffDiskSettings": null,
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "diskEncryptionSet": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/RCI-Resource-Group/providers/Microsoft.Compute/disks/JenkinsProxy_OsDisk_1_335e246cccb24c469da4ec5451df44a4",
+          "resourceGroup": "RCI-Resource-Group",
+          "securityProfile": null,
+          "storageAccountType": "Premium_LRS"
+        },
+        "name": "JenkinsProxy_OsDisk_1_335e246cccb24c469da4ec5451df44a4",
+        "osType": "Linux",
+        "vhd": null,
+        "writeAcceleratorEnabled": null
+      }
+    },
+    "tags": {
+      "Business_Unit": "RCI"
+    },
+    "timeCreated": "2022-06-10T13:56:38.278359+00:00",
+    "type": "Microsoft.Compute/virtualMachines",
+    "userData": null,
+    "virtualMachineScaleSet": null,
+    "vmId": "245c7646-897b-4f82-ba60-71d403f7950d",
+    "zones": null
+  },
+  {
+    "additionalCapabilities": null,
+    "applicationProfile": null,
+    "availabilitySet": null,
+    "billingProfile": null,
+    "capacityReservation": null,
+    "diagnosticsProfile": {
+      "bootDiagnostics": {
+        "enabled": false,
+        "storageUri": null
+      }
+    },
+    "evictionPolicy": null,
+    "extendedLocation": null,
+    "extensionsTimeBudget": null,
+    "hardwareProfile": {
+      "vmSize": "Standard_D2_v4",
+      "vmSizeProperties": null
+    },
+    "host": null,
+    "hostGroup": null,
+    "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TESTCLASS/providers/Microsoft.Compute/virtualMachines/Alma-99",
+    "identity": null,
+    "instanceView": null,
+    "licenseType": null,
+    "location": "southcentralus",
+    "name": "Alma-99",
+    "networkProfile": {
+      "networkApiVersion": null,
+      "networkInterfaceConfigurations": null,
+      "networkInterfaces": [
+        {
+          "deleteOption": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TestClass/providers/Microsoft.Network/networkInterfaces/Alma-99",
+          "primary": null,
+          "resourceGroup": "TestClass"
+        }
+      ]
+    },
+    "osProfile": {
+      "adminPassword": null,
+      "adminUsername": "RCIAdmin",
+      "allowExtensionOperations": true,
+      "computerName": "Alma-99",
+      "customData": null,
+      "linuxConfiguration": {
+        "disablePasswordAuthentication": false,
+        "patchSettings": {
+          "assessmentMode": "ImageDefault",
+          "automaticByPlatformSettings": null,
+          "patchMode": "ImageDefault"
+        },
+        "provisionVmAgent": true,
+        "ssh": null
+      },
+      "requireGuestProvisionSignal": true,
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "platformFaultDomain": null,
+    "priority": null,
+    "provisioningState": "Succeeded",
+    "proximityPlacementGroup": null,
+    "resourceGroup": "TESTCLASS",
+    "resources": null,
+    "scheduledEventsProfile": null,
+    "securityProfile": null,
+    "storageProfile": {
+      "dataDisks": [],
+      "diskControllerType": "SCSI",
+      "imageReference": {
+        "communityGalleryImageId": null,
+        "exactVersion": null,
+        "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/PackerRG/providers/Microsoft.Compute/images/RCIAlma",
+        "offer": null,
+        "publisher": null,
+        "resourceGroup": "PackerRG",
+        "sharedGalleryImageId": null,
+        "sku": null,
+        "version": null
+      },
+      "osDisk": {
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "deleteOption": "Detach",
+        "diffDiskSettings": null,
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "diskEncryptionSet": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TestClass/providers/Microsoft.Compute/disks/Alma-99_disk1_7ab7638c77644fff87e15cc684b737bf",
+          "resourceGroup": "TestClass",
+          "securityProfile": null,
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "Alma-99_disk1_7ab7638c77644fff87e15cc684b737bf",
+        "osType": "Linux",
+        "vhd": null,
+        "writeAcceleratorEnabled": null
+      }
+    },
+    "tags": null,
+    "timeCreated": "2025-07-06T13:25:15.381846+00:00",
+    "type": "Microsoft.Compute/virtualMachines",
+    "userData": null,
+    "virtualMachineScaleSet": null,
+    "vmId": "150a5cf5-b970-4350-9b03-fe2687eca545",
+    "zones": null
+  },
+  {
+    "additionalCapabilities": null,
+    "applicationProfile": null,
+    "availabilitySet": null,
+    "billingProfile": null,
+    "capacityReservation": null,
+    "diagnosticsProfile": {
+      "bootDiagnostics": {
+        "enabled": false,
+        "storageUri": null
+      }
+    },
+    "evictionPolicy": null,
+    "extendedLocation": null,
+    "extensionsTimeBudget": null,
+    "hardwareProfile": {
+      "vmSize": "Standard_D2_v4",
+      "vmSizeProperties": null
+    },
+    "host": null,
+    "hostGroup": null,
+    "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TESTCLASS/providers/Microsoft.Compute/virtualMachines/Guac",
+    "identity": null,
+    "instanceView": null,
+    "licenseType": null,
+    "location": "southcentralus",
+    "name": "Guac",
+    "networkProfile": {
+      "networkApiVersion": null,
+      "networkInterfaceConfigurations": null,
+      "networkInterfaces": [
+        {
+          "deleteOption": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TestClass/providers/Microsoft.Network/networkInterfaces/Guac",
+          "primary": null,
+          "resourceGroup": "TestClass"
+        }
+      ]
+    },
+    "osProfile": {
+      "adminPassword": null,
+      "adminUsername": "RCIAdmin",
+      "allowExtensionOperations": true,
+      "computerName": "Guac",
+      "customData": null,
+      "linuxConfiguration": {
+        "disablePasswordAuthentication": false,
+        "patchSettings": {
+          "assessmentMode": "ImageDefault",
+          "automaticByPlatformSettings": null,
+          "patchMode": "ImageDefault"
+        },
+        "provisionVmAgent": true,
+        "ssh": null
+      },
+      "requireGuestProvisionSignal": true,
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "platformFaultDomain": null,
+    "priority": null,
+    "provisioningState": "Succeeded",
+    "proximityPlacementGroup": null,
+    "resourceGroup": "TESTCLASS",
+    "resources": null,
+    "scheduledEventsProfile": null,
+    "securityProfile": {
+      "encryptionAtHost": null,
+      "securityType": "TrustedLaunch",
+      "uefiSettings": {
+        "secureBootEnabled": true,
+        "vTpmEnabled": true
+      }
+    },
+    "storageProfile": {
+      "dataDisks": [],
+      "diskControllerType": "SCSI",
+      "imageReference": {
+        "communityGalleryImageId": null,
+        "exactVersion": "24.04.202507010",
+        "id": null,
+        "offer": "ubuntu-24_04-lts",
+        "publisher": "canonical",
+        "sharedGalleryImageId": null,
+        "sku": "Server",
+        "version": "latest"
+      },
+      "osDisk": {
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "deleteOption": "Detach",
+        "diffDiskSettings": null,
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "diskEncryptionSet": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TestClass/providers/Microsoft.Compute/disks/Guac_OsDisk_1_0b53ecc0f7a3415cb24fa42a59fd31a2",
+          "resourceGroup": "TestClass",
+          "securityProfile": null,
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "Guac_OsDisk_1_0b53ecc0f7a3415cb24fa42a59fd31a2",
+        "osType": "Linux",
+        "vhd": null,
+        "writeAcceleratorEnabled": null
+      }
+    },
+    "tags": null,
+    "timeCreated": "2025-07-06T13:26:46.366366+00:00",
+    "type": "Microsoft.Compute/virtualMachines",
+    "userData": null,
+    "virtualMachineScaleSet": null,
+    "vmId": "d1371acd-44e6-41bf-9269-693d9f492e01",
+    "zones": null
+  },
+  {
+    "additionalCapabilities": null,
+    "applicationProfile": null,
+    "availabilitySet": null,
+    "billingProfile": null,
+    "capacityReservation": null,
+    "diagnosticsProfile": {
+      "bootDiagnostics": {
+        "enabled": false,
+        "storageUri": null
+      }
+    },
+    "evictionPolicy": null,
+    "extendedLocation": null,
+    "extensionsTimeBudget": null,
+    "hardwareProfile": {
+      "vmSize": "Standard_D2_v4",
+      "vmSizeProperties": null
+    },
+    "host": null,
+    "hostGroup": null,
+    "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TESTCLASS/providers/Microsoft.Compute/virtualMachines/Ubuntu-99",
+    "identity": null,
+    "instanceView": null,
+    "licenseType": null,
+    "location": "southcentralus",
+    "name": "Ubuntu-99",
+    "networkProfile": {
+      "networkApiVersion": null,
+      "networkInterfaceConfigurations": null,
+      "networkInterfaces": [
+        {
+          "deleteOption": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TestClass/providers/Microsoft.Network/networkInterfaces/Ubuntu-99",
+          "primary": null,
+          "resourceGroup": "TestClass"
+        }
+      ]
+    },
+    "osProfile": {
+      "adminPassword": null,
+      "adminUsername": "RCIAdmin",
+      "allowExtensionOperations": true,
+      "computerName": "Ubuntu-99",
+      "customData": null,
+      "linuxConfiguration": {
+        "disablePasswordAuthentication": false,
+        "patchSettings": {
+          "assessmentMode": "ImageDefault",
+          "automaticByPlatformSettings": null,
+          "patchMode": "ImageDefault"
+        },
+        "provisionVmAgent": true,
+        "ssh": null
+      },
+      "requireGuestProvisionSignal": true,
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "platformFaultDomain": null,
+    "priority": null,
+    "provisioningState": "Succeeded",
+    "proximityPlacementGroup": null,
+    "resourceGroup": "TESTCLASS",
+    "resources": null,
+    "scheduledEventsProfile": null,
+    "securityProfile": null,
+    "storageProfile": {
+      "dataDisks": [],
+      "diskControllerType": "SCSI",
+      "imageReference": {
+        "communityGalleryImageId": null,
+        "exactVersion": null,
+        "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/PackerRG/providers/Microsoft.Compute/images/RCIUbuntu",
+        "offer": null,
+        "publisher": null,
+        "resourceGroup": "PackerRG",
+        "sharedGalleryImageId": null,
+        "sku": null,
+        "version": null
+      },
+      "osDisk": {
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "deleteOption": "Detach",
+        "diffDiskSettings": null,
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "diskEncryptionSet": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TestClass/providers/Microsoft.Compute/disks/Ubuntu-99_disk1_201bcc8ac2c94e6291135c421103c231",
+          "resourceGroup": "TestClass",
+          "securityProfile": null,
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "Ubuntu-99_disk1_201bcc8ac2c94e6291135c421103c231",
+        "osType": "Linux",
+        "vhd": null,
+        "writeAcceleratorEnabled": null
+      }
+    },
+    "tags": null,
+    "timeCreated": "2025-07-06T13:24:21.897149+00:00",
+    "type": "Microsoft.Compute/virtualMachines",
+    "userData": null,
+    "virtualMachineScaleSet": null,
+    "vmId": "cc3184f5-c379-47a8-b24a-6b454138ab05",
+    "zones": null
+  },
+  {
+    "additionalCapabilities": null,
+    "applicationProfile": null,
+    "availabilitySet": null,
+    "billingProfile": null,
+    "capacityReservation": null,
+    "diagnosticsProfile": {
+      "bootDiagnostics": {
+        "enabled": false,
+        "storageUri": null
+      }
+    },
+    "evictionPolicy": null,
+    "extendedLocation": null,
+    "extensionsTimeBudget": null,
+    "hardwareProfile": {
+      "vmSize": "Standard_D2_v4",
+      "vmSizeProperties": null
+    },
+    "host": null,
+    "hostGroup": null,
+    "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TESTCLASS/providers/Microsoft.Compute/virtualMachines/Windows-99",
+    "identity": null,
+    "instanceView": null,
+    "licenseType": null,
+    "location": "southcentralus",
+    "name": "Windows-99",
+    "networkProfile": {
+      "networkApiVersion": null,
+      "networkInterfaceConfigurations": null,
+      "networkInterfaces": [
+        {
+          "deleteOption": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TestClass/providers/Microsoft.Network/networkInterfaces/Windows-99",
+          "primary": null,
+          "resourceGroup": "TestClass"
+        }
+      ]
+    },
+    "osProfile": {
+      "adminPassword": null,
+      "adminUsername": "student",
+      "allowExtensionOperations": true,
+      "computerName": "Windows-99",
+      "customData": null,
+      "linuxConfiguration": null,
+      "requireGuestProvisionSignal": true,
+      "secrets": [],
+      "windowsConfiguration": {
+        "additionalUnattendContent": null,
+        "enableAutomaticUpdates": true,
+        "enableVMAgentPlatformUpdates": true,
+        "patchSettings": {
+          "assessmentMode": "ImageDefault",
+          "automaticByPlatformSettings": null,
+          "enableHotpatching": null,
+          "patchMode": "AutomaticByOS"
+        },
+        "provisionVmAgent": true,
+        "timeZone": null,
+        "winRm": null
+      }
+    },
+    "plan": null,
+    "platformFaultDomain": null,
+    "priority": null,
+    "provisioningState": "Succeeded",
+    "proximityPlacementGroup": null,
+    "resourceGroup": "TESTCLASS",
+    "resources": [
+      {
+        "autoUpgradeMinorVersion": null,
+        "enableAutomaticUpgrade": null,
+        "forceUpdateTag": null,
+        "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TESTCLASS/providers/Microsoft.Compute/virtualMachines/Windows-99/extensions/BGInfo",
+        "instanceView": null,
+        "location": null,
+        "name": null,
+        "protectedSettings": null,
+        "protectedSettingsFromKeyVault": null,
+        "provisioningState": null,
+        "publisher": null,
+        "resourceGroup": "TESTCLASS",
+        "settings": null,
+        "suppressFailures": null,
+        "tags": null,
+        "type": null,
+        "typeHandlerVersion": null,
+        "typePropertiesType": null
+      }
+    ],
+    "scheduledEventsProfile": null,
+    "securityProfile": null,
+    "storageProfile": {
+      "dataDisks": [],
+      "imageReference": {
+        "communityGalleryImageId": null,
+        "exactVersion": null,
+        "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/PackerRG/providers/Microsoft.Compute/images/RCIWin2025",
+        "offer": null,
+        "publisher": null,
+        "resourceGroup": "PackerRG",
+        "sharedGalleryImageId": null,
+        "sku": null,
+        "version": null
+      },
+      "osDisk": {
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "deleteOption": "Detach",
+        "diffDiskSettings": null,
+        "diskSizeGb": 127,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "diskEncryptionSet": null,
+          "id": "/subscriptions/f2fdcd94-a81b-4cc5-b30d-24d694d671a9/resourceGroups/TestClass/providers/Microsoft.Compute/disks/Windows-99_disk1_b1dd19b46ab14d0c838ec3d2f9ac8145",
+          "resourceGroup": "TestClass",
+          "securityProfile": null,
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "Windows-99_disk1_b1dd19b46ab14d0c838ec3d2f9ac8145",
+        "osType": "Windows",
+        "vhd": null,
+        "writeAcceleratorEnabled": null
+      }
+    },
+    "tags": null,
+    "timeCreated": "2025-07-06T13:19:05.223617+00:00",
+    "type": "Microsoft.Compute/virtualMachines",
+    "userData": null,
+    "virtualMachineScaleSet": null,
+    "vmId": "1d87f3e0-3bf8-4225-8bff-550f8da69147",
+    "zones": null
+  }
+]
