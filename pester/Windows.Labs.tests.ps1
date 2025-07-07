@@ -213,7 +213,7 @@ Describe '507 Labs' {
       where groups.groupname ='Administrators';"
 
       $res = (osqueryi.exe "$query" --json | ConvertFrom-Json)
-      $res.Username | Should -Contain 'Administrator'
+      $res.Username | Should -Contain 'rciadmin'
       $res.Username | Should -Contain 'student'
     }
 
@@ -237,8 +237,8 @@ Describe '507 Labs' {
 
     It 'Part 2 - Get-LocalGroupMember returns correct admins' {
       $res = (Get-LocalGroupMember -Group "administrators")
-      $res.Name -replace ".*\\" | Should -Contain '507WIN10\rciadmin'
-      $res.Name -replace ".*\\" | Should -Contain '507WIN10\Student'
+      $res.Name -replace ".*\\" | Should -Contain 'rciadmin'
+      $res.Name -replace ".*\\" | Should -Contain 'Student'
     }
 
     It 'Part 2 - UserRights.psm1 returns admin for debug privilege' {
@@ -396,14 +396,14 @@ Describe '507 Labs' {
     }
     
     It 'Part 2 - Alma lsb_release distribution info is correct' {
-      (run-sshCommand -Command "lsb_release -i | awk -F: '{print $2}'") |
-        Should -BeLike '*AlmaLinux'
-      (run-sshCommand -Command "lsb_release -d | awk -F: '{print $2}'") |
-        Should -BeLike '*8.6 (Sky Tiger)'
-      (run-sshCommand -Command "lsb_release -r | awk -F: '{print $2}'") |
-        Should -BeLike '*8.6'
-      (run-sshCommand -Command "lsb_release -c | awk -F: '{print $2}'") |
-        Should -BeLike '*SkyTiger'
+      (run-sshCommand -Command "cat /etc/os-release | awk -F=  '/^NAME/ {print $2}'") |
+        Should -BeLike '*AlmaLinux*'
+      (run-sshCommand -Command "cat /etc/os-release | awk -F=  '/^VERSION=/ {print $2}'") |
+        Should -BeLike '*9.5 (Teal Serval)*'
+      (run-sshCommand -Command "cat /etc/os-release | awk -F=  '/^VERSION_ID/ {print $2}'") |
+        Should -BeLike '*9.5*'
+      (run-sshCommand -Command "cat /etc/os-release | awk -F=  '/^SUPPORT_END/ {print $2}'") |
+        Should -BeLike '*2032-06-01*'
     }
 
     It 'Part 2 - Alma shows >200 missing patches' {
@@ -411,9 +411,9 @@ Describe '507 Labs' {
       $patchCount | Should -BeGreaterThan 200 
     }
 
-    It 'Part 2 - Alma shows 21 SUID binaries' {
+    It 'Part 2 - Alma shows 13 SUID binaries' {
       $res = run-sshCommand -Command "sudo find / -type f -perm -4000 2>/dev/null"
-      $res.Count | Should -BeExactly 21
+      $res.Count | Should -BeExactly 13
     }
   }
 
@@ -487,7 +487,7 @@ Describe '507 Labs' {
 
     
     It 'Part 4 - 4 buckets have MFA Delete turned off' {
-      $res = (Get-S3Bucket | Where-Object BucketName -Like '*AUD1*' | Get-S3BucketVersioning | Where-Object EnableMfaDelete -EQ $false)
+      $res = (Get-S3Bucket | Where-Object BucketName -Like '*AUD1*' | Get-S3BucketVersioning | Where-Object EnableMfaDelete -NE $true)
       $res.Count | Should -Be 4
     }
   }
@@ -513,7 +513,7 @@ Describe '507 Labs' {
 
     It 'Part 1 - Cert expiration is 2032-11-19' {
       $sslyzeRes = (C:\tools\sslyze\sslyze.exe --certinfo juiceshop.lab.local:443)
-      ($sslyzeRes -like '*Not After*2032-11-19').Count | Should -Be 1
+      ($sslyzeRes -like '*Not After*2035-03-30').Count | Should -Be 1
     }
 
     It 'Part 1 - Windows CA store test fails' {
