@@ -411,9 +411,9 @@ Describe '507 Labs' {
       $patchCount | Should -BeGreaterThan 200 
     }
 
-    It 'Part 2 - Alma shows 13 SUID binaries' {
+    It 'Part 2 - Alma shows 15 SUID binaries' {
       $res = run-sshCommand -Command "sudo find / -type f -perm -4000 2>/dev/null"
-      $res.Count | Should -BeExactly 13
+      $res.Count | Should -BeExactly 15
     }
   }
 
