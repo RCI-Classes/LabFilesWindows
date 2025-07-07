@@ -399,9 +399,9 @@ Describe '507 Labs' {
       (run-sshCommand -Command "cat /etc/os-release | awk -F=  '/^NAME/ {print $2}'") |
         Should -BeLike '*AlmaLinux*'
       (run-sshCommand -Command "cat /etc/os-release | awk -F=  '/^VERSION=/ {print $2}'") |
-        Should -BeLike '*9.5 (Teal Serval)*'
+        Should -BeLike '*9.6 (Sage Margay)*'
       (run-sshCommand -Command "cat /etc/os-release | awk -F=  '/^VERSION_ID/ {print $2}'") |
-        Should -BeLike '*9.5*'
+        Should -BeLike '*9.6*'
       (run-sshCommand -Command "cat /etc/os-release | awk -F=  '/^SUPPORT_END/ {print $2}'") |
         Should -BeLike '*2032-06-01*'
     }
